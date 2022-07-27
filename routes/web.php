@@ -20,6 +20,10 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [DashboardController::class,'index'])->name('dashboard');
 Route::get('/dashboard', [DashboardController::class,'viewDashboard'])->name('dashboard1');
+//Log In
+Route::get('/admin/login',[DashboardController::class,'login'])->name('login');
+Route::post('/admin/do-login',[DashboardController::class,'doLogin'])->name('admin.login');
+Route::get('/logout',[DashboardController::class,'logout'])->name('admin.logout');
 
 
 Route::get('/product/add',[ProductController::class,'add'])->name('add.product');
