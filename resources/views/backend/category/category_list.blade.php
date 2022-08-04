@@ -22,7 +22,16 @@
             <td>{{$data->description}}</td>
             <td>{{$data->photo}}</td>
             
-            <td>{{$data->Action}}</td>
+            <td>
+                <a class="btn btn-primary btn-sm" title="Edit" >
+                    <i class="fa fa-edit"></i>  
+                </a> 
+
+                <br>
+                    <a class="btn btn-danger btn-sm delete" title="Delete">
+                        <i class="fa fa-trash"></i>
+                    </a>
+            </td>
 
 
         </tr>

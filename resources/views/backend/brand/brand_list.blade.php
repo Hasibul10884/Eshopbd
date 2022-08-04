@@ -30,8 +30,10 @@
                                 <td>
                                     <a class="btn btn-primary btn-sm" title="Edit" >
                                         <i class="fa fa-edit"></i>  
-                                    </a>                                      
-                                        <a class="btn btn-danger btn-sm delete" title="Delete" id="16">
+                                    </a> 
+                                </td>
+                                <td>                                     
+                                        <a class="btn btn-danger btn-sm delete" title="Delete">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                 </td>
