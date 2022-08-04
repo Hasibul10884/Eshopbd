@@ -5,23 +5,19 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+//frontend Dashboard
+Route::get('/', [HomeController::class,'index'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class,'viewDashboard'])->name('dashboard1');
 
-Route::get('/', [DashboardController::class,'index'])->name('dashboard');
-Route::get('/dashboard', [DashboardController::class,'viewDashboard'])->name('dashboard1');
+
+// backend Dashboard
+Route::get('/admin', [DashboardController::class,'index'])->name('dashboard');
+Route::get('/admin/dashboard', [DashboardController::class,'viewDashboard'])->name('dashboard1');
+
 //Log In admin
 Route::get('/admin/login',[DashboardController::class,'login'])->name('login');
 Route::post('/admin/do-login',[DashboardController::class,'doLogin'])->name('admin.login');
