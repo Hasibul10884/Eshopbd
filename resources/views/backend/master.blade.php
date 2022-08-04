@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="admin, dashboard">
@@ -30,7 +28,7 @@
 
 <body>
 
-    
+{{--     
     <div id="preloader">
         <div class="waviy">
             <span style="--i:1">L</span>
@@ -44,7 +42,7 @@
             <span style="--i:9">.</span>
             <span style="--i:10">.</span>
         </div>
-    </div>
+    </div> --}}
     <!--*******************
         Preloader end
     ********************-->
@@ -67,10 +65,9 @@
         
 
         
-           
+
         @include('backend.fixed.header')
-      
-           
+
 
         <!--**********************************
             Sidebar start
@@ -94,10 +91,7 @@
         </div>
 
 
-       
-        
-        
-      
+
             
 
         @include('backend.fixed.footer')

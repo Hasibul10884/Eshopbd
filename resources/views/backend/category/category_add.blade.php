@@ -9,16 +9,17 @@
         <input name="name" type="text" class="form-control" id="formGroupExampleInput"
             placeholder="Enter Category Name">
     </div>
-
+<br>
     <div class="form-group">
         <label for="formGroupExampleInput2">Enter Description</label>
         <textarea class="form-control" name="description" id="" placeholder="Enter Description"></textarea>
     </div>
+    <br>
     <div class="form-group">
         <label for="formGroupExampleInput2">Upload Image</label>
         <input type="file" name="photo" class="form-control">
     </div>
-
+<br>
     <button class="btn btn-success">Submit</button>
 </form>
 

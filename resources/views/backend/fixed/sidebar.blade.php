@@ -95,8 +95,8 @@
                             </li>
                             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Brand</a>
                                 <ul aria-expanded="false">
-                                    <li><a href="email-compose.html">Add Brand</a></li>
-                                    <li><a href="email-inbox.html">Brand List</a></li>
+                                    <li><a href="{{route('add.brand')}}">Add Brand</a></li>
+                                    <li><a href="{{route('list.brand')}}">Brand List</a></li>
                                     <li><a href="email-read.html">Edit Brand</a></li>
                                 </ul>
                             </li>
