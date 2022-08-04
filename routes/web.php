@@ -7,11 +7,18 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 
 
 //frontend Dashboard
 Route::get('/', [HomeController::class,'index'])->name('dashboard');
 Route::get('/dashboard', [HomeController::class,'viewDashboard'])->name('dashboard1');
+
+//customer login
+Route::get('/registration',[CustomerController::class,'registration'])->name('registration');
+Route::post('/do-registration',[CustomerController::class,'doRegistration'])->name('registration.do');
+Route::post('/do-login',[CustomerController::class,'doLogin'])->name('login.do');
+Route::get('/logout',[CustomerController::class,'logout'])->name('logout');
 
 
 // backend Dashboard

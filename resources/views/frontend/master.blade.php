@@ -1,62 +1,98 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <!-- Basic -->
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <!-- Mobile Metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <!-- Site Metas -->
-      <meta name="keywords" content="" />
-      <meta name="description" content="" />
-      <meta name="author" content="" />
-      <link rel="shortcut icon" href="{{url('frontend/images/favicon.png')}}" type="">
-      <title>EshopBd</title>
-      <!-- bootstrap core css -->
-      <link rel="stylesheet" type="text/css" href="{{url('frontend/css/bootstrap.css')}}" />
-      <!-- font awesome style -->
-      <link href="{{url('frontend/css/font-awesome.min.css')}}" rel="stylesheet" />
-      <!-- Custom styles for this template -->
-      <link href="{{url('frontend/css/style.css')}}" rel="stylesheet" />
-      <!-- responsive style -->
-      <link href="{{url('frontend/css/responsive.css')}}" rel="stylesheet" />
-   </head>
-   <body>
-      <div class="hero_area">
-         <!-- header section strats -->
-         @include('frontend.fixed.header')
-         <!-- end header section -->
-         <!-- slider section -->
-         @include('frontend.fixed.slider')
-         <!-- end slider section -->
-      </div>
-      <!-- why section -->
-      @include('frontend.fixed.why')
-      <!-- end why section -->
-      
-      <!-- arrival section -->
-      @include('frontend.fixed.arrival')
-      <!-- end arrival section -->
-      
-      <!-- product section -->
-      @include('frontend.fixed.product')
-      <!-- end product section -->
-      @yield('frontend_content')
-      <!-- subscribe section -->
-      @include('frontend.fixed.subscribe')
-      <!-- end subscribe section -->
-      <!-- client section -->
-      @include('frontend.fixed.client')
-      <!-- end client section -->
-      <!-- footer start -->
-      @include('frontend.fixed.footer')
-      <!-- jQery -->
-      <script src="{{url('frontend/js/jquery-3.4.1.min.js')}}"></script>
-      <!-- popper js -->
-      <script src="{{url('frontend/js/popper.min.js')}}"></script>
-      <!-- bootstrap js -->
-      <script src="{{url('frontend/js/bootstrap.js')}}"></script>
-      <!-- custom js -->
-      <script src="{{url('frontend/js/custom.js')}}"></script>
-   </body>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EShopper - Bootstrap Shop Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{{url('frontend/img/favicon.ico')}}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{url('frontend/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{url('frontend/css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    @include('frontend.fixed.topbar')
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    @include('frontend.fixed.navbar')
+    <!-- Navbar End -->
+    @include('frontend.fixed.slider')
+
+    <!-- Featured Start -->
+    @include('frontend.fixed.featured')
+    <!-- Featured End -->
+    
+@yield('frontend_content')
+
+    <!-- Categories Start -->
+    @include('frontend.fixed.categories')
+    <!-- Categories End -->
+
+
+    <!-- Offer Start -->
+    @include('frontend.fixed.offer')
+    <!-- Offer End -->
+
+
+    <!-- Products Start -->
+    @include('frontend.fixed.product')
+    <!-- Products End -->
+
+
+    <!-- Subscribe Start -->
+    @include('frontend.fixed.subscribe')
+    <!-- Subscribe End -->
+
+
+    <!-- Products Start -->
+    @include('frontend.fixed.products')
+    <!-- Products End -->
+
+
+    <!-- Vendor Start -->
+    @include('frontend.fixed.vendor')
+    <!-- Vendor End -->
+
+
+    <!-- Footer Start -->
+    @include('frontend.fixed.footer')
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url('frontend/lib/easing/easing.min.js')}}"></script>
+    <script src="{{url('frontend/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{{url('frontend/mail/jqBootstrapValidation.min.js')}}"></script>
+    <script src="{{url('frontend/mail/contact.js')}}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{url('frontend/js/main.js')}}"></script>
+</body>
+
 </html>

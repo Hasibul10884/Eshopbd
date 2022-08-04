@@ -1,22 +1,18 @@
-<section class="subscribe_section">
-    <div class="container-fuild">
-       <div class="box">
-          <div class="row">
-             <div class="col-md-6 offset-md-3">
-                <div class="subscribe_form ">
-                   <div class="heading_container heading_center">
-                      <h3>Subscribe To Get Discount Offers</h3>
-                   </div>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                   <form action="">
-                      <input type="email" placeholder="Enter your email">
-                      <button>
-                      subscribe
-                      </button>
-                   </form>
+<div class="container-fluid bg-secondary my-5">
+    <div class="row justify-content-md-center py-5 px-xl-5">
+        <div class="col-md-6 col-12 py-5">
+            <div class="text-center mb-2 pb-2">
+                <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Stay Updated</span></h2>
+                <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod duo labore labore.</p>
+            </div>
+            <form action="">
+                <div class="input-group">
+                    <input type="text" class="form-control border-white p-4" placeholder="Email Goes Here">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary px-4">Subscribe</button>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
+            </form>
+        </div>
     </div>
- </section>
+</div>

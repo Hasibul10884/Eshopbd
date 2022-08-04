@@ -1,91 +1,37 @@
-<section class="slider_section ">
-    <div class="slider_bg_box">
-       <img src="{{url('frontend/images/slider-bg.jpg')}}" alt="">
+<div id="header-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="height: 410px;">
+            <img class="img-fluid" src="{{url('frontend/img/carousel-1.jpg')}}" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 700px;">
+                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
+                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
+                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" style="height: 410px;">
+            <img class="img-fluid" src="{{url('frontend/img/carousel-2.jpg')}}" alt="Image">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 700px;">
+                    <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
+                    <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
+                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-       <div class="carousel-inner">
-          <div class="carousel-item active">
-             <div class="container ">
-                <div class="row">
-                   <div class="col-md-7 col-lg-6 ">
-                      <div class="detail-box">
-                         <h1>
-                            <span>
-                            Sale 20% Off
-                            </span>
-                            <br>
-                            On Everything
-                         </h1>
-                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
-                         <div class="btn-box">
-                            <a href="" class="btn1">
-                            Shop Now
-                            </a>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="carousel-item ">
-             <div class="container ">
-                <div class="row">
-                   <div class="col-md-7 col-lg-6 ">
-                      <div class="detail-box">
-                         <h1>
-                            <span>
-                            Sale 20% Off
-                            </span>
-                            <br>
-                            On Everything
-                         </h1>
-                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
-                         <div class="btn-box">
-                            <a href="" class="btn1">
-                            Shop Now
-                            </a>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="carousel-item">
-             <div class="container ">
-                <div class="row">
-                   <div class="col-md-7 col-lg-6 ">
-                      <div class="detail-box">
-                         <h1>
-                            <span>
-                            Sale 20% Off
-                            </span>
-                            <br>
-                            On Everything
-                         </h1>
-                         <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
-                         <div class="btn-box">
-                            <a href="" class="btn1">
-                            Shop Now
-                            </a>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-       <div class="container">
-          <ol class="carousel-indicators">
-             <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-             <li data-target="#customCarousel1" data-slide-to="1"></li>
-             <li data-target="#customCarousel1" data-slide-to="2"></li>
-          </ol>
-       </div>
-    </div>
- </section>
+    <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+            <span class="carousel-control-prev-icon mb-n2"></span>
+        </div>
+    </a>
+    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+            <span class="carousel-control-next-icon mb-n2"></span>
+        </div>
+    </a>
+</div>
+</div>
+</div>
+</div>
