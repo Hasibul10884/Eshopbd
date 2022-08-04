@@ -27,7 +27,14 @@
             <td>{{$data->category}}</td>
             <td>{{$data->quantity}}</td>
             <td>
-                <a href="" class="btn btn-outline-danger">Delete</a>
+                <a class="btn btn-primary btn-sm" title="Edit" >
+                    <i class="fa fa-edit"></i>  
+                </a> 
+            </td>
+            <td>                                     
+                    <a class="btn btn-danger btn-sm delete" title="Delete">
+                        <i class="fa fa-trash"></i>
+                    </a>
             </td>
         </tr>
         @endforeach

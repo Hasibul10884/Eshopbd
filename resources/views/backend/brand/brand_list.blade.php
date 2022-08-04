@@ -14,7 +14,7 @@
             <th scope="col">Price</th>
             <th scope="col">Category</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="width: 100px" class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody id="table3-body">
@@ -28,7 +28,12 @@
                                 <td>{{$data->category}}</td>
                                 <td>{{$data->quantity}}</td>
                                 <td>
-                                    <a href="" class="btn btn-outline-danger">Delete</a>
+                                    <a class="btn btn-primary btn-sm" title="Edit" >
+                                        <i class="fa fa-edit"></i>  
+                                    </a>                                      
+                                        <a class="btn btn-danger btn-sm delete" title="Delete" id="16">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
                                 </td>
                                 
 
