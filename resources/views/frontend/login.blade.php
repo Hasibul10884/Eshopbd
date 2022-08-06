@@ -1,9 +1,8 @@
 
+@extends('frontend.master') 
+@section('frontend_content')
 
-@extends('frontend.master')
 
-
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,13 +46,17 @@
 									<div class="login-separater text-center"> <span>OR LOGIN WITH EMAIL</span>
 										<hr/>
 									</div>
+									<form action="{{route('admin.login')}}" method="post">
+										@csrf 
 									<div class="form-group mt-4" >
+										
 										<label>Email Address</label>
-										<input type="text" class="form-control" placeholder="Enter your email address" />
+										
+										<input name="email" type="email" class="form-control" placeholder="Enter your email address" />
 									</div>
 									<div class="form-group">
 										<label>Password</label>
-										<input type="password" class="form-control" placeholder="Enter your password" />
+										<input name="password" type="password" class="form-control" placeholder="Enter your password" />
 									</div>
 									<div class="form-row">
 										<div class="form-group col">
@@ -66,13 +69,13 @@
 										</div>
 									</div>
 									<div class="btn-group mt-3 w-100">
-										<button type="button" class="btn btn-primary btn-block">Log In</button>
+										<button type="submit" class="btn btn-primary btn-block">Log In</button>
 										<button type="button" class="btn btn-primary"><i class="lni lni-arrow-right"></i>
 										</button>
 									</div>
 									<hr>
 									<div class="text-center">
-										<p class="mb-0">Don't have an account? <a href="authentication-register.html">Sign up</a>
+										<p class="mb-0">Don't have an account? <a href="{{route('registration.do')}}">Sign up</a>
 										</p>
 									</div>
 								</div>
@@ -91,4 +94,11 @@
 </body>
 
 </html>
+
 @endsection
+
+
+
+
+
+

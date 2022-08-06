@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
 
-@section('content')
+@section('frontend_content')
 
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
 										<h3 class="mt-4 font-weight-bold">Create an Account</h3>
 									</div>
 									<div class="input-group shadow-sm rounded mt-5">
-										<div class="input-group-prepend">	<span class="input-group-text bg-transparent border-0 cursor-pointer"><img src="frontend/assets/images/icons/search.svg" alt="" width="16"></span>
+										<div class="input-group-prepend">	<span class="input-group-text bg-transparent border-0 cursor-pointer"><img src="{{url('frontend/assets/images/icons/search.svg')}}" alt="" width="16"></span>
 										</div>
 										<input type="button" class="form-control border-0" value="Register with google">
 									</div>
@@ -52,24 +52,26 @@
 									<div class="login-separater text-center"> <span>OR REGISTER WITH EMAIL</span>
 										<hr/>
 									</div>
+									<form action="{{route('registration.do')}}" method="post">
+										@csrf
 									<div class="form-group mt-4">
 										<label>Email Address</label>
-										<input type="text" class="form-control" placeholder="example@user.com" />
+										<input name="eamil" type="email" class="form-control" placeholder="example@user.com" />
 									</div>
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label>First Name</label>
-											<input type="text" class="form-control" placeholder="Jhon" />
+											<input name="name" type="text" class="form-control" placeholder="Jhon" />
 										</div>
 										<div class="form-group col-md-6">
 											<label>Last Name</label>
-											<input type="text" class="form-control" placeholder="Deo" />
+											<input name="name" type="text" class="form-control" placeholder="Deo" />
 										</div>
 									</div>
 									<div class="form-group">
 										<label>Password</label>
 										<div class="input-group" id="show_hide_password">
-											<input class="form-control border-right-0" type="password" value="12345678">
+											<input name="password" class="form-control border-right-0" type="password" value="12345678">
 											<div class="input-group-append">	<a href="javascript:;" class="input-group-text bg-transparent border-left-0"><i class='bx bx-hide'></i></a>
 											</div>
 										</div>
@@ -95,10 +97,7 @@
 										</button>
 									</div>
 									<hr/>
-									<div class="text-center mt-4">
-										<p class="mb-0">Already have an account? <a href="authentication-login.html">Login</a>
-										</p>
-									</div>
+									
 								</div>
 							</div>
 							<div class="col-lg-6">

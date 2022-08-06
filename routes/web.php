@@ -7,18 +7,19 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CustomerController;
+
 
 
 //frontend Dashboard
 Route::get('/', [HomeController::class,'index'])->name('dashboard');
-Route::get('/dashboard', [HomeController::class,'viewDashboard'])->name('dashboard1');
+
 
 //customer login
-Route::get('/registration',[CustomerController::class,'registration'])->name('registration');
-Route::post('/do-registration',[CustomerController::class,'doRegistration'])->name('registration.do');
-Route::post('/do-login',[CustomerController::class,'doLogin'])->name('login.do');
-Route::get('/logout',[CustomerController::class,'logout'])->name('logout');
+Route::get('/registration',[HomeController::class,'registration'])->name('registration');
+Route::post('/do-registration',[HomeController::class,'doRegistration'])->name('registration.do');
+// Route::get('/login',[HomeController::class,'login'])->name('login');
+Route::post('/do-login',[HomeController::class,'doLogin'])->name('login.do');
+Route::get('/logout',[HomeController::class,'logout'])->name('frontend.logout');
 
 
 // backend Dashboard
@@ -45,6 +46,3 @@ Route::get('/brand/list',[BrandController::class,'list'])->name('list.brand');
 Route::get('/brand/add',[BrandController::class,'add'])->name('add.brand');
 Route::post('/brand/store',[BrandController::class,'store'])->name('brand.store');
 
-Route::get('/abc', function(){
-    return view('backend.dashboard.dashboard');
-});

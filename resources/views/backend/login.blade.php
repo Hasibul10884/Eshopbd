@@ -1,285 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log In Page</title>
-    <style>
-        /* BASIC */
-        html {
-            background-color: #56baed;
-        }
-        body {
-            font-family: "Poppins", sans-serif;
-            height: 100vh;
-        }
-        a {
-            color: #92badd;
-            display:inline-block;
-            text-decoration: none;
-            font-weight: 400;
-        }
-        h2 {
-            text-align: center;
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            display:inline-block;
-            margin: 40px 8px 10px 8px;
-            color: #cccccc;
-        }
-        /* STRUCTURE */
-        .wrapper {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            min-height: 100%;
-            padding: 20px;
-        }
-        #formContent {
-            -webkit-border-radius: 10px 10px 10px 10px;
-            border-radius: 10px 10px 10px 10px;
-            background: #fff;
-            padding: 30px;
-            width: 90%;
-            max-width: 450px;
-            position: relative;
-            padding: 0px;
-            -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-            box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-            text-align: center;
-        }
-        #formFooter {
-            background-color: #f6f6f6;
-            border-top: 1px solid #dce8f1;
-            padding: 25px;
-            text-align: center;
-            -webkit-border-radius: 0 0 10px 10px;
-            border-radius: 0 0 10px 10px;
-        }
-        /* TABS */
-        h2.inactive {
-            color: #cccccc;
-        }
-        h2.active {
-            color: #0d0d0d;
-            border-bottom: 2px solid #5fbae9;
-        }
-        /* FORM TYPOGRAPHY*/
-        input[type=button], input[type=submit], input[type=reset]  {
-            background-color: #56baed;
-            border: none;
-            color: white;
-            padding: 15px 80px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 13px;
-            -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-            box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-            -webkit-border-radius: 5px 5px 5px 5px;
-            border-radius: 5px 5px 5px 5px;
-            margin: 5px 20px 40px 20px;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-        input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-            background-color: #39ace7;
-        }
-        input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-            -moz-transform: scale(0.95);
-            -webkit-transform: scale(0.95);
-            -o-transform: scale(0.95);
-            -ms-transform: scale(0.95);
-            transform: scale(0.95);
-        }
-        input[type=text] {
-            background-color: #f6f6f6;
-            border: none;
-            color: #0d0d0d;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 5px;
-            width: 85%;
-            border: 2px solid #f6f6f6;
-            -webkit-transition: all 0.5s ease-in-out;
-            -moz-transition: all 0.5s ease-in-out;
-            -ms-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            -webkit-border-radius: 5px 5px 5px 5px;
-            border-radius: 5px 5px 5px 5px;
-        }
-        input[type=text]:focus {
-            background-color: #fff;
-            border-bottom: 2px solid #5fbae9;
-        }
-        input[type=text]:placeholder {
-            color: #cccccc;
-        }
-        input[type=password] {
-            background-color: #f6f6f6;
-            border: none;
-            color: #0d0d0d;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 5px;
-            width: 85%;
-            border: 2px solid #f6f6f6;
-            -webkit-transition: all 0.5s ease-in-out;
-            -moz-transition: all 0.5s ease-in-out;
-            -ms-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            -webkit-border-radius: 5px 5px 5px 5px;
-            border-radius: 5px 5px 5px 5px;
-        }
-        input[type=password]:focus {
-            background-color: #fff;
-            border-bottom: 2px solid #5fbae9;
-        }
-        input[type=password]:placeholder {
-            color: #cccccc;
-        }
-        /* ANIMATIONS */
-        /* Simple CSS3 Fade-in-down Animation */
-        .fadeInDown {
-            -webkit-animation-name: fadeInDown;
-            animation-name: fadeInDown;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-        }
-        @-webkit-keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                -webkit-transform: translate3d(0, -100%, 0);
-                transform: translate3d(0, -100%, 0);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: none;
-                transform: none;
-            }
-        }
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                -webkit-transform: translate3d(0, -100%, 0);
-                transform: translate3d(0, -100%, 0);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: none;
-                transform: none;
-            }
-        }
-        /* Simple CSS3 Fade-in Animation */
-        @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-        .fadeIn {
-            opacity:0;
-            -webkit-animation:fadeIn ease-in 1;
-            -moz-animation:fadeIn ease-in 1;
-            animation:fadeIn ease-in 1;
-            -webkit-animation-fill-mode:forwards;
-            -moz-animation-fill-mode:forwards;
-            animation-fill-mode:forwards;
-            -webkit-animation-duration:1s;
-            -moz-animation-duration:1s;
-            animation-duration:1s;
-        }
-        .fadeIn.first {
-            -webkit-animation-delay: 0.4s;
-            -moz-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-        }
-        .fadeIn.second {
-            -webkit-animation-delay: 0.6s;
-            -moz-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-        }
-        .fadeIn.third {
-            -webkit-animation-delay: 0.8s;
-            -moz-animation-delay: 0.8s;
-            animation-delay: 0.8s;
-        }
-        .fadeIn.fourth {
-            -webkit-animation-delay: 1s;
-            -moz-animation-delay: 1s;
-            animation-delay: 1s;
-        }
-        /* Simple CSS3 Fade-in Animation */
-        .underlineHover:after {
-            display: block;
-            left: 0;
-            bottom: -10px;
-            width: 0;
-            height: 2px;
-            background-color: #56baed;
-            content: "";
-            transition: width 0.2s;
-        }
-        .underlineHover:hover {
-            color: #0d0d0d;
-        }
-        .underlineHover:hover:after{
-            width: 100%;
-        }
-        /* OTHERS */
-        *:focus {
-            outline: none;
-        }
-        #icon {
-            width:60%;
-        }
-    </style>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Log in</title>
+	<!--favicon-->
+	<link rel="icon" href="{{url('frontend/assets/images/favicon-32x32.png')}}" type="image/png" />
+	<!-- loader-->
+	<link href="{{url('frontend/assets/css/pace.min.css')}}" rel="stylesheet" />
+	<script src="{{url('frontend/assets/js/pace.min.js')}}"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{url('frontend/assets/css/bootstrap.min.css')}}" />
+	<!-- Icons CSS -->
+	<link rel="stylesheet" href="{{url('frontend/assets/css/icons.css')}}" />
+	<!-- App CSS -->
+	<link rel="stylesheet" href="{{url('frontend/assets/css/app.css')}}" />
 </head>
-<body>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="wrapper fadeInDown">
-    <div id="formContent">
-        <!-- Tabs Titles -->
-
-        <!-- Icon -->
-        <div class="fadeIn first">
-            <img style="width: 100px;" src="https://cdn-icons-png.flaticon.com/512/295/295128.png" id="icon" alt="User Icon" />
-        </div>
-
-        <!-- Login Form -->
-        <form action="{{route('admin.login')}}" method="post">
-            @csrf
-            <input type="text" id="login" class="fadeIn second" name="email" placeholder="Enter Email">
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
-        </form>
-
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
-
-    </div>
-</div>
+<body class="bg-login">
+	<!-- wrapper -->
+	<div class="wrapper">
+		<div class="section-authentication-login d-flex align-items-center justify-content-center">
+			<div class="row">
+				<div class="col-12 col-lg-10 mx-auto">
+					<div class="card radius-15">
+						<div class="row no-gutters">
+							<div class="col-lg-6">
+								<div class="card-body p-md-5">
+									<div class="text-center">
+										<img src="{{url('frontend/assets/images/logo-icon.png')}}" width="80" alt="">
+										<h3 class="mt-4 font-weight-bold">Welcome Back</h3>
+									</div>
+									<div class="input-group shadow-sm rounded mt-5">
+										<div class="input-group-prepend">	<span class="input-group-text bg-transparent border-0 cursor-pointer"><img src="{{url('frontend/assets/images/icons/search.svg')}}" alt="" width="16"></span>
+										</div>
+										<input type="button" class="form-control  border-0" value="Log in with google">
+									</div>
+									<div class="login-separater text-center"> <span>OR LOGIN WITH EMAIL</span>
+										<hr/>
+									</div>
+									<form action="{{route('admin.login')}}" method="post">
+										@csrf 
+									<div class="form-group mt-4" >
+										
+										<label>Email Address</label>
+										
+										<input name="email" type="email" class="form-control" placeholder="Enter your email address" />
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input name="password" type="password" class="form-control" placeholder="Enter your password" />
+									</div>
+									<div class="form-row">
+										<div class="form-group col">
+											<div class="custom-control custom-switch">
+												<input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+												<label class="custom-control-label" for="customSwitch1">Remember Me</label>
+											</div>
+										</div>
+										<div class="form-group col text-right"> <a href="authentication-forgot-password.html"><i class='bx bxs-key mr-2'></i>Forget Password?</a>
+										</div>
+									</div>
+									<div class="btn-group mt-3 w-100">
+										<button type="submit" class="btn btn-primary btn-block">Log In</button>
+										<button type="button" class="btn btn-primary"><i class="lni lni-arrow-right"></i>
+										</button>
+									</div>
+									<hr>
+									<div class="text-center">
+										<p class="mb-0">Don't have an account? <a href="{{route('registration.do')}}">Sign up</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<img src="{{url('frontend/assets/images/login-images/login-frent-img.jpg')}}" class="card-img login-img h-100" alt="...">
+							</div>
+						</div>
+						<!--end row-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end wrapper -->
 </body>
+
 </html>
