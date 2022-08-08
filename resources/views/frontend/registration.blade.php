@@ -1,7 +1,7 @@
-@extends('frontend.master')
+{{-- @extends('frontend.master')
 
 
-@section('frontend_content')
+@section('content') --}}
 
 
 <!DOCTYPE html>
@@ -56,43 +56,34 @@
 										@csrf
 									<div class="form-group mt-4">
 										<label>Email Address</label>
-										<input name="eamil" type="email" class="form-control" placeholder="example@user.com" />
+										<input name="email" type="email" class="form-control" placeholder="example@user.com" />
 									</div>
 									<div class="form-row">
-										<div class="form-group col-md-6">
+										<div class="form-group col-md-4">
 											<label>First Name</label>
-											<input name="name" type="text" class="form-control" placeholder="Jhon" />
+											<input name="firstname" type="text" class="form-control" placeholder="Enter First Name" />
 										</div>
-										<div class="form-group col-md-6">
+										<div class="form-group col-md-4">
 											<label>Last Name</label>
-											<input name="name" type="text" class="form-control" placeholder="Deo" />
+											<input name="lastname" type="text" class="form-control" placeholder="Enter last name" />
+										</div>
+										<div class="form-group col-md-4">
+											<label>User Name</label>
+											<input name="username" type="text" class="form-control" placeholder="Enter user name" />
 										</div>
 									</div>
 									<div class="form-group">
 										<label>Password</label>
 										<div class="input-group" id="show_hide_password">
-											<input name="password" class="form-control border-right-0" type="password" value="12345678">
+											<input name="password" class="form-control border-right-0" type="password" value="Enter password">
 											<div class="input-group-append">	<a href="javascript:;" class="input-group-text bg-transparent border-left-0"><i class='bx bx-hide'></i></a>
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<label>Country</label>
-										<select class="form-control">
-											<option>India</option>
-											<option>United Kingdom</option>
-											<option>America</option>
-											<option>Dubai</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="customCheck1">
-											<label class="custom-control-label" for="customCheck1">I read and agree to Terms & Conditions</label>
-										</div>
-									</div>
+									
+
 									<div class="btn-group mt-3 w-100">
-										<button type="button" class="btn btn-primary btn-block">Register</button>
+										<button type="submit" class="btn btn-primary btn-block">Register</button>
 										<button type="button" class="btn btn-primary"><i class="lni lni-arrow-right"></i>
 										</button>
 									</div>
@@ -135,4 +126,4 @@
 
 </html>
 
-@endsection
+{{-- @endsection --}}

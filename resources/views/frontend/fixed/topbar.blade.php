@@ -9,6 +9,8 @@
                 <a class="text-dark" href="">Support</a>
             </div>
         </div>
+
+
         <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
                 <a class="text-dark px-2" href="">
@@ -47,15 +49,27 @@
                 </div>
             </form>
         </div>
-        <div class="col-lg-3 col-6 text-right">
-            <a href="" class="btn border">
-                <i class="fas fa-heart text-primary"></i>
-                <span class="badge">0</span>
-            </a>
-            <a href="" class="btn border">
-                <i class="fas fa-shopping-cart text-primary"></i>
-                <span class="badge">0</span>
-            </a>
+
+        <div class="header__top__right__auth">
+
+            @guest()
+            <!-- Button trigger modal -->
+           
+                <a href="{{route('login.do')}}"><i class="fa fa-user"></i>LOGIN</a>
+            <br>
+                <a href="{{route('registration')}}"<i class="fa fa-user"></i> Register</a>
+            @endguest
+
+            @auth()
+                    <a href="{{route('logout')}}"><i class="fa fa-user"></i> Logout</a>| {{auth()->user()->name}}
+            @endauth
+
+
         </div>
+
+       
+                   
+                            
+
     </div>
 </div>

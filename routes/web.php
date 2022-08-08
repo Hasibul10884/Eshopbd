@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 
@@ -15,11 +16,11 @@ Route::get('/', [HomeController::class,'index'])->name('dashboard');
 
 
 //customer login
-Route::get('/registration',[HomeController::class,'registration'])->name('registration');
-Route::post('/do-registration',[HomeController::class,'doRegistration'])->name('registration.do');
-// Route::get('/login',[HomeController::class,'login'])->name('login');
-Route::post('/do-login',[HomeController::class,'doLogin'])->name('login.do');
-Route::get('/logout',[HomeController::class,'logout'])->name('frontend.logout');
+Route::get('/registration',[CustomerController::class,'registration'])->name('registration');
+Route::post('/do-registration',[CustomerController::class,'doRegistration'])->name('registration.do');
+Route::get('/login',[CustomerController::class,'login'])->name('customer.login');
+Route::post('/do-login',[CustomerController::class,'doLogin'])->name('login.do');
+Route::get('/logout',[CustomerController::class,'logout'])->name('frontend.logout');
 
 
 // backend Dashboard

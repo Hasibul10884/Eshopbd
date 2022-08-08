@@ -1,6 +1,6 @@
-
+{{-- 
 @extends('frontend.master') 
-@section('frontend_content')
+@section('content') --}}
 
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@
 									<div class="login-separater text-center"> <span>OR LOGIN WITH EMAIL</span>
 										<hr/>
 									</div>
-									<form action="{{route('admin.login')}}" method="post">
+									<form action="{{route('login.do')}}" method="post">
 										@csrf 
 									<div class="form-group mt-4" >
 										
@@ -75,7 +75,7 @@
 									</div>
 									<hr>
 									<div class="text-center">
-										<p class="mb-0">Don't have an account? <a href="{{route('registration.do')}}">Sign up</a>
+										<p class="mb-0">Don't have an account? <a href="{{route('registration')}}">Sign up</a>
 										</p>
 									</div>
 								</div>
@@ -95,7 +95,7 @@
 
 </html>
 
-@endsection
+{{-- @endsection --}}
 
 
 

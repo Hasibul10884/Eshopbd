@@ -40,7 +40,7 @@
     @include('frontend.fixed.featured')
     <!-- Featured End -->
     
-@yield('frontend_content')
+@yield('content')
 
     <!-- Categories Start -->
     @include('frontend.fixed.categories')

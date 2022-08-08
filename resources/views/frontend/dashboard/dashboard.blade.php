@@ -1,5 +1,5 @@
 @extends('frontend.master') 
-@section('frontend_content')
+@section('content')
 
 
 
